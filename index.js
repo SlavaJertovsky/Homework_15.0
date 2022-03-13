@@ -1,7 +1,18 @@
-function toJadenCase(phrase) {
+function oddOrEven(items) {
+    let sum = 0;
+    items.forEach(function (item) {
+        sum =+ item;
+    });
 
-   return phrase.split(' ').map(word => word.slice(0, 1).toUpperCase() + word.slice(1)).join(' ');
+    if (sum % 2 == 0) {
+        return "even";
+
+    }  return "odd";
 
 }
-
-console.log(toJadenCase('How can mirrors be real if our eyes aren"t real')); // How Can Mirrors Be Real If Our Eyes Aren"t Real
+console.log(oddOrEven([0, 1, 5])); // 'even' 'четное'
+console.log(oddOrEven([0, 1, 3])); // 'even'
+console.log(oddOrEven([0, -1, -5])); // 'even'
+console.log(oddOrEven([0, 1, 4])); // 'odd' 'нечетное'
+console.log(oddOrEven([0, -1, 2])); // 'odd'
+console.log(oddOrEven([0])); // 'even'
